@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/jyotsanaarora/kustomize-app-of-apps.git
     targetRevision: main
-    path: clusters/all
+    path: cluster-apps
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-gitops
@@ -16,3 +16,9 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    retry:
+      limit: -1
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m

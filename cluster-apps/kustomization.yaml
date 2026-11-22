@@ -1,0 +1,7 @@
+# Root build. Lists only the child Application definitions.
+# overlays/ is in this same directory and is the source path for those children.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - apps/prod-east
+  - apps/prod-west

@@ -1,8 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: guestbook-east
+namespace: guestbook-west
 resources:
-  - ../../base
+  - ../base
 patches:
   - target:
       kind: Namespace
@@ -10,4 +10,4 @@ patches:
     patch: |-
       - op: replace
         path: /metadata/name
-        value: guestbook-east
+        value: guestbook-west
