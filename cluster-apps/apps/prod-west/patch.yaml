@@ -1,9 +1,0 @@
-- op: replace
-  path: /metadata/name
-  value: guestbook-prod-west
-- op: replace
-  path: /spec/source/path
-  value: cluster-apps/overlays/prod-west
-- op: replace
-  path: /spec/destination/namespace
-  value: guestbook-west
